@@ -21,7 +21,7 @@ public class Cliente {
     }
 
     public Cliente(String cpf, String nome) {
-        super();
+        this();
         this.cpf = cpf;
         this.nome = nome;
     }
