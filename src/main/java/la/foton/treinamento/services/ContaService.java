@@ -12,7 +12,8 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class ContaService {
 
-    private ClienteService clienteService = ClienteService.getInstance();
+    @Inject
+    private ClienteService clienteService;
     @Inject
     private ContaDAO contaDAO;
 

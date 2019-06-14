@@ -33,7 +33,4 @@ public class ContaWS {
         return Response.ok().build();
     }
 
-    @PUT
-    @Path("{numero}/saca")
-
 }

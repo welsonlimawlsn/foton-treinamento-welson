@@ -12,6 +12,7 @@ import static org.junit.Assert.fail;
 public class ClienteServiceTest {
 
     private Cliente cliente;
+    private ClienteService clienteService;
 
     @Before
     public void setUp() {
@@ -21,7 +22,7 @@ public class ClienteServiceTest {
     @Test
     public void naoDeveValidaClienteSituacaoPendente() {
         try {
-            ClienteService.getInstance().validaSituacaoCliente(cliente);
+            clienteService.validaSituacaoCliente(cliente);
             fail();
         } catch (NegocioException e) {
             assertEquals(Mensagem.CLIENTE_SITUACAO_PENDENTE, e.getMensagem());

@@ -1,9 +1,19 @@
 package la.foton.treinamento.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Cliente {
 
+    @Id
     private String cpf;
+
+    @Column
     private String nome;
+
+    @Column
     private SituacaoDoCliente situacao;
 
     public Cliente() {
@@ -24,11 +34,23 @@ public class Cliente {
         return cpf;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     public String getNome() {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public SituacaoDoCliente getSituacao() {
         return situacao;
+    }
+
+    public void setSituacao(SituacaoDoCliente situacao) {
+        this.situacao = situacao;
     }
 }
